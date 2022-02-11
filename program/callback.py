@@ -35,7 +35,7 @@ async def set_start(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📚 Commands", callback_data="command_list"),
+                    InlineKeyboardButton("Details 📂", callback_data="command_list"),
                 ],
                 
             ]
@@ -81,28 +81,27 @@ async def set_commands(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""💞 **ʜᴇʟʟᴏᴡ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
 
-
-» ꜰᴏʀ ᴋɴᴏᴡɪɴɢ ᴀ ᴄᴏᴍᴍᴀɴᴅ ʟɪꜱᴛ ᴏꜰ ʙʀᴏᴋᴇɴ ᴊᴜꜱᴛ ᴘʀᴇꜱꜱ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴀɴᴅ ʀᴇᴀᴅ ᴄᴏᴍᴍᴀɴᴅꜱ ᴇxᴘʟᴀɴᴀᴛɪᴏɴ.
+**» ꜰᴏʀ ᴋɴᴏᴡɪɴɢ ᴀ ᴄᴏᴍᴍᴀɴᴅ ʟɪꜱᴛ ᴏꜰ ʙʀᴏᴋᴇɴ ᴊᴜꜱᴛ ᴘʀᴇꜱꜱ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴀɴᴅ ʀᴇᴀᴅ ᴄᴏᴍᴍᴀɴᴅꜱ ᴇxᴘʟᴀɴᴀᴛɪᴏɴ.**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
-                    InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
-                    InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
-                    InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
+                    InlineKeyboardButton("🔙", callback_data="home_start"),
+                    InlineKeyboardButton("🎵", callback_data="admin_command"),
+                    InlineKeyboardButton("🎥", callback_data="admin_command"),
+                    InlineKeyboardButton("🏘️", callback_data="admin_command"),
                 ],[
-                    InlineKeyboardButton("Users", callback_data="user_command"),
-                    InlineKeyboardButton("Users", callback_data="user_command"),
+                    InlineKeyboardButton("ᴍᴜꜱɪᴄ", callback_data="music_command"),
+                    InlineKeyboardButton("ᴠɪᴅᴇᴏ", callback_data="video_command"),
                 ],
                 [
-                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner", callback_data="owner_command"),
+                    InlineKeyboardButton("ꜱᴇᴀʀᴄʜ", callback_data="search_command"),
+                    InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about_command"),
                 ],[
-                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner", callback_data="owner_command"),
+                    InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ", callback_data="download_command"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu_command"),
                 ],[
-                    InlineKeyboardButton("Expand Menu", callback_data="expand_command")
+                    InlineKeyboardButton("📥 ᴇxᴘᴀɴᴅ ᴍᴇɴᴜ 📥", callback_data="expand_command")
                 ],
             ]
         ),
@@ -174,32 +173,32 @@ async def set_user(_, query: CallbackQuery):
         return
     await query.answer("basic commands")
     await query.edit_message_text(
-        f"""
-» ꜰᴏʀ ᴋɴᴏᴡɪɴɢ ᴀ ᴄᴏᴍᴍᴀɴᴅ ʟɪꜱᴛ ᴏꜰ ʙʀᴏᴋᴇɴ ᴊᴜꜱᴛ ᴘʀᴇꜱꜱ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴀɴᴅ ʀᴇᴀᴅ ᴄᴏᴍᴍᴀɴᴅꜱ ᴇxᴘʟᴀɴᴀᴛɪᴏɴ.
+        f"""💞 **ʜᴇʟʟᴏᴡ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
+
+**» ꜰᴏʀ ᴋɴᴏᴡɪɴɢ ᴀ ᴄᴏᴍᴍᴀɴᴅ ʟɪꜱᴛ ᴏꜰ ʙʀᴏᴋᴇɴ ᴊᴜꜱᴛ ᴘʀᴇꜱꜱ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴀɴᴅ ʀᴇᴀᴅ ᴄᴏᴍᴍᴀɴᴅꜱ ᴇxᴘʟᴀɴᴀᴛɪᴏɴ.**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
-                    InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
+                    InlineKeyboardButton("ᴍᴜꜱɪᴄ", callback_data="music_command"),
+                    InlineKeyboardButton("ᴠɪᴅᴇᴏ", callback_data="video_command"),
                 ],[
-                    InlineKeyboardButton("Users", callback_data="user_command"),
-                    InlineKeyboardButton("Commands", callback_data="user_command"),
+                    InlineKeyboardButton("ꜱᴇᴀʀᴄʜ", callback_data="search_command"),
+                    InlineKeyboardButton("ʟʏʀɪᴄꜱ", callback_data="lyrics_command"),
                 ],
                 [
-                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner", callback_data="owner_command"),
+                    InlineKeyboardButton("ꜱᴛʀᴇᴀᴍ", callback_data="stream_command"),
+                    InlineKeyboardButton("ꜱᴛᴀᴛᴜꜱ", callback_data="status_command"),
                 ],[
-                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner", callback_data="owner_command"),
+                    InlineKeyboardButton("ᴀᴅᴍɪɴ", callback_data="admin_command"),
+                    InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about_command"),
                 ],[
-                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner", callback_data="owner_command"),
+                    InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ", callback_data="download_command"),
+                    InlineKeyboardButton("ᴏᴡɴᴇʀ", callback_data="owner_command"),
                 ],[
-                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner", callback_data="owner_command"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ ꜱᴇᴛᴛɪɴɢꜱ", callback_data="menu_command"),
                 ],[
-                    InlineKeyboardButton("Collapse Menu", callback_data="command_list")
+                    InlineKeyboardButton("📤 ᴄᴏʟʟᴀᴘꜱᴇ ᴍᴇɴᴜ 📤", callback_data="command_list")
                 ],
             ]
         ),
