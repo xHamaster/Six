@@ -112,17 +112,17 @@ All commands can be used with (`! / .`) handler""",
                     InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
                     InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
                 ],[
-                    InlineKeyboardButton("👩🏻‍💼 Users Commands", callback_data="user_command"),
-                    InlineKeyboardButton("👩🏻‍💼 Users Commands", callback_data="user_command"),
+                    InlineKeyboardButton("Users", callback_data="user_command"),
+                    InlineKeyboardButton("Users", callback_data="user_command"),
                 ],
                 [
-                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
+                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
+                    InlineKeyboardButton("Owner", callback_data="owner_command"),
                 ],[
-                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
+                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
+                    InlineKeyboardButton("Owner", callback_data="owner_command"),
                 ],[
-                    InlineKeyboardButton("🔙 Go Back", callback_data="expand_command")
+                    InlineKeyboardButton("Expand Menu", callback_data="expand_command")
                 ],
             ]
         ),
@@ -215,20 +215,23 @@ async def set_user(_, query: CallbackQuery):
                     InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
                     InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
                 ],[
-                    InlineKeyboardButton("👩🏻‍💼 Users Commands", callback_data="user_command"),
-                    InlineKeyboardButton("👩🏻‍💼 Users Commands", callback_data="user_command"),
+                    InlineKeyboardButton("Users", callback_data="user_command"),
+                    InlineKeyboardButton("Commands", callback_data="user_command"),
                 ],
                 [
-                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
+                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
+                    InlineKeyboardButton("Owner", callback_data="owner_command"),
                 ],[
-                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
+                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
+                    InlineKeyboardButton("Owner", callback_data="owner_command"),
                 ],[
-                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
-                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
+                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
+                    InlineKeyboardButton("Owner", callback_data="owner_command"),
                 ],[
-                    InlineKeyboardButton("🔙 Go Back", callback_data="home_start")
+                    InlineKeyboardButton("Sudo", callback_data="sudo_command"),
+                    InlineKeyboardButton("Owner", callback_data="owner_command"),
+                ],[
+                    InlineKeyboardButton("Collapse Menu", callback_data="command_list")
                 ],
             ]
         ),
