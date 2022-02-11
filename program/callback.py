@@ -27,8 +27,8 @@ async def set_start(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
         f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-**[𝗕𝗿𝗼𝗸𝗲𝗻 𝟮.𝟬 𝗠𝘂𝘀𝗶𝗰](https://t.me/CreatorPavan) ᴀʟʟᴏᴡꜱ ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏ ᴏɴ ᴜʀ ɢʀᴏᴜᴘꜱ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴᴇᴡ ᴛᴇʟᴇɢʀᴀᴍ'ꜱ ᴠɪᴅᴇᴏ ᴄʜᴀᴛꜱ ꜰᴇᴀᴛᴜʀᴇ..!
-💡 ᴜꜱᴇ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ʙᴜᴛᴛᴏɴꜱ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴘᴀᴠᴀɴ ᴛᴜɴᴇꜱ ᴏᴘ ᴍᴜꜱɪᴄ ʙᴏᴛ ꜱʏꜱᴛᴇᴍ.**
+💁🏻 **[ʙʀᴏᴋᴇɴ ᴍᴜꜱɪᴄ](https://t.me/CreatorPavan) ᴀʟʟᴏᴡꜱ ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏ ᴏɴ ᴜʀ ɢʀᴏᴜᴘꜱ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴᴇᴡ ᴛᴇʟᴇɢʀᴀᴍ'ꜱ ᴠɪᴅᴇᴏ ᴄʜᴀᴛꜱ ꜰᴇᴀᴛᴜʀᴇ..!\n
+💡 ᴜꜱᴇ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʙʀᴏᴋᴇɴ ᴍᴜꜱɪᴄ ᴏᴘ ᴍᴜꜱɪᴄ ʙᴏᴛ ꜱʏꜱᴛᴇᴍ.**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -87,7 +87,7 @@ async def set_commands(_, query: CallbackQuery):
                     InlineKeyboardButton("🔙", callback_data="home_start"),
                     InlineKeyboardButton("🎵", callback_data="admin_command"),
                     InlineKeyboardButton("🎥", callback_data="admin_command"),
-                    InlineKeyboardButton("🏘️", callback_data="admin_command"),
+                    InlineKeyboardButton("👨🏻‍💻", callback_data="admin_command"),
                 ],[
                     InlineKeyboardButton("ᴍᴜꜱɪᴄ", callback_data="music_command"),
                     InlineKeyboardButton("ᴠɪᴅᴇᴏ", callback_data="video_command"),
