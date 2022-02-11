@@ -63,31 +63,21 @@ async def start_(c: Client, message: Message):
         await message.reply_text("❗️ **You've blocked from using this bot!**")
         return
     await message.reply_text(
-        f"""✨ **Welcome {message.from_user.mention()} !**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Is a bot to play music and video in groups, through the Telegram Group video chat!**
-
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
-
-🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**
+        f"""✨ 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 **{message.from_user.mention()} !**\n
+𝗧𝗵𝗶𝘀 𝗶𝘀 𝘁𝗵𝗲 𝗕𝗿𝗼𝗸𝗲𝗻 𝗠𝘂𝘀𝗶𝗰...!
+┏━━━━━━━━━━━━━━━━━┓
+┣» ᴏᴘ ᴍᴜꜱɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ. 
+┣» ʜɪɢʜ ǫᴜᴀʟɪᴛʏ ᴍᴜꜱɪᴄ.
+┣» ᴠɪᴅᴇᴏ ᴘʟᴀʏ ꜱᴜᴘᴘᴏʀᴛᴇᴅ.
+┣» ᴀᴅᴠᴀɴᴄᴇᴅ ꜰᴇᴀᴛᴜʀᴇꜱ.
+┣» ꜱᴜᴘᴇʀꜰᴀꜱᴛ ꜱᴘᴇᴇᴅ.
+┗━━━━━━━━━━━━━━━━━┛
+ᴅᴇꜱɪɢɴᴇᴅ ʙʏ : [ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ](https://t.me/CreatorPavan)
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                        "➕ Add Broken to your Group ➕",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                    )
-                ],
-                [
-                    InlineKeyboardButton("📚 Commands 📚", callback_data="command_list")
-                ],
-                [
-                    InlineKeyboardButton(
-                        "Group", url=f"https://t.me/{GROUP_SUPPORT}"
-                    ),
-                    InlineKeyboardButton(
-                        "Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
+                    InlineKeyboardButton("Details 📂", callback_data="command_list")
                 ]
                 
             ]
@@ -192,11 +182,11 @@ async def new_chat(c: Client, m: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                            InlineKeyboardButton("💭 Support", url=f"https://t.me/{GROUP_SUPPORT}")
+                            InlineKeyboardButton("Channel", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                            InlineKeyboardButton("Support", url=f"https://t.me/{GROUP_SUPPORT}")
                         ],
                         [
-                            InlineKeyboardButton("👤 Assistant", url=f"https://t.me/{ass_uname}")
+                            InlineKeyboardButton("Assistant", url=f"https://t.me/{ass_uname}")
                         ]
                     ]
                 )
