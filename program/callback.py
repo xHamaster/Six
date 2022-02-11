@@ -27,11 +27,9 @@ async def set_start(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
         f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Is a bot to play music and video in groups, through the Telegram Group video chat!**
-
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
-
-🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**""",
+**[𝗕𝗿𝗼𝗸𝗲𝗻 𝟮.𝟬 𝗠𝘂𝘀𝗶𝗰](https://t.me/CreatorPavan) ᴀʟʟᴏᴡꜱ ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏ ᴏɴ ᴜʀ ɢʀᴏᴜᴘꜱ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴᴇᴡ ᴛᴇʟᴇɢʀᴀᴍ'ꜱ ᴠɪᴅᴇᴏ ᴄʜᴀᴛꜱ ꜰᴇᴀᴛᴜʀᴇ..!
+💡 ᴜꜱᴇ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ʙᴜᴛᴛᴏɴꜱ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴘᴀᴠᴀɴ ᴛᴜɴᴇꜱ ᴏᴘ ᴍᴜꜱɪᴄ ʙᴏᴛ ꜱʏꜱᴛᴇᴍ.**
+""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
