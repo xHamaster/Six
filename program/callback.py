@@ -122,7 +122,7 @@ All commands can be used with (`! / .`) handler""",
                     InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
                     InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
                 ],[
-                    InlineKeyboardButton("🔙 Go Back", callback_data="sudo_commandd")
+                    InlineKeyboardButton("🔙 Go Back", callback_data="expand_command")
                 ],
             ]
         ),
@@ -185,30 +185,30 @@ async def set_admin(_, query: CallbackQuery):
         ),
     )
 
-@Client.on_callback_query(filters.regex("sudo_commandd"))
-async def set_sudo(_, query: CallbackQuery):
+
+@Client.on_callback_query(filters.regex("expand_command"))
+async def set_user(_, query: CallbackQuery):
     user_id = query.from_user.id
     if await is_gbanned_user(user_id):
         await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
         return
-    if user_id not in SUDO_USERS:
-        await query.answer("⚠️ You don't have permissions to click this button\n\n» This button is reserved for sudo members of this bot.", show_alert=True)
-        return
-    await query.answer("sudo commands")
+    await query.answer("basic commands")
     await query.edit_message_text(
-        f"""✏️ Command list for sudo user.
+        f"""✏️ Command list for all user.
 
-» /stats - get the bot current statistic
-» /calls - show you the list of all active group call in database
-» /block (`chat_id`) - use this to blacklist any group from using your bot
-» /unblock (`chat_id`) - use this to whitelist any group from using your bot
-» /blocklist - show you the list of all blacklisted chat
-» /speedtest - run the bot server speedtest
-» /sysinfo - show the system information
-» /eval - execute any code (`developer stuff`)
-» /sh - run any command (`developer stuff`)
+» /play (song name/link) - play music on video chat
+» /vplay (video name/link) - play video on video chat
+» /vstream (m3u8/yt live link) - play live stream video
+» /playlist - see the current playing song
+» /lyric (query) - scrap the song lyric
+» /video (query) - download video from youtube
+» /song (query) - download song from youtube
+» /search (query) - search a youtube video link
+» /ping - show the bot ping status
+» /uptime - show the bot uptime status
+» /alive - show the bot alive info (in Group only)
 
-⚡ __Powered by {BOT_NAME} AI__""",
+⚡️ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
