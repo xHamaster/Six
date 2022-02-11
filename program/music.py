@@ -164,7 +164,7 @@ async def play(c: Client, m: Message):
                 await m.reply_photo(
                     photo=image,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [{songname}]({link}) | `music`\n⏱️ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                    caption=f"🏷 **Bʀᴏᴋᴇɴ 😍 Tʋɴᴇꜱ 🎸 Nøω Ƥɭɑyɩɳʛ 💞 [{songname}]({url}) 🔊 Mʋsɩƈ 🌷 øɴ 🤞 ʀᴇQʋᴇꜱᴛ 👉 {requester} 😜...**",
                 )
                 os.remove(image)
             else:
@@ -175,7 +175,7 @@ async def play(c: Client, m: Message):
                     userid = m.from_user.id
                     thumbnail = f"{IMG_5}"
                     image = await thumb(thumbnail, title, userid, ctitle)
-                    await suhu.edit("🔄 **Joining vc...**")
+                    await suhu.edit("■■■■■■■■■■ `100%`")
                     await music_on(chat_id)
                     await add_active_chat(chat_id)
                     await calls.join_group_call(
@@ -195,7 +195,7 @@ async def play(c: Client, m: Message):
                     await m.reply_photo(
                         photo=image,
                         reply_markup=InlineKeyboardMarkup(buttons),
-                        caption=f"🗂 **Name:** [{songname}]({link}) | `music`\n⏱️ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                        caption=f"🏷 **Bʀᴏᴋᴇɴ 😍 Tʋɴᴇꜱ 🎸 Nøω Ƥɭɑyɩɳʛ 💞 [{songname}]({url}) 🔊 Mʋsɩƈ 🌷 øɴ 🤞 ʀᴇQʋᴇꜱᴛ 👉 {requester} 😜...**",
                     )
                     await idle()
                     os.remove(image)
@@ -209,7 +209,7 @@ async def play(c: Client, m: Message):
                     "» reply to an **audio file** or **give something to search.**"
                 )
             else:
-                suhu = await c.send_message(chat_id, "🔍 **Searching...**")
+                suhu = await c.send_message(chat_id, "■■■■■ `50% | Download`")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
@@ -238,12 +238,12 @@ async def play(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=InlineKeyboardMarkup(buttons),
-                                caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [{songname}]({url}) | `music`\n**⏱ Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                                caption=f"🏷 **Bʀᴏᴋᴇɴ 😍 Tʋɴᴇꜱ 🎸 Nøω Ƥɭɑyɩɳʛ 💞 [{songname}]({url}) 🔊 Mʋsɩƈ 🌷 øɴ 🤞 ʀᴇQʋᴇꜱᴛ 👉 {requester} 😜...**",
                             )
                             os.remove(image)
                         else:
                             try:
-                                await suhu.edit("🔄 **Joining vc...**")
+                                await suhu.edit("■■■■■■■■■■ `100%`")
                                 await music_on(chat_id)
                                 await add_active_chat(chat_id)
                                 await calls.join_group_call(
@@ -263,7 +263,7 @@ async def play(c: Client, m: Message):
                                 await m.reply_photo(
                                     photo=image,
                                     reply_markup=InlineKeyboardMarkup(buttons),
-                                    caption=f"🗂 **Name:** [{songname}]({url}) | `music`\n**⏱ Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                                    caption=f"🏷 **Bʀᴏᴋᴇɴ 😍 Tʋɴᴇꜱ 🎸 Nøω Ƥɭɑyɩɳʛ 💞 [{songname}]({url}) 🔊 Mʋsɩƈ 🌷 øɴ 🤞 ʀᴇQʋᴇꜱᴛ 👉 {requester} 😜...**",
                                 )
                                 await idle()
                                 os.remove(image)
@@ -278,7 +278,7 @@ async def play(c: Client, m: Message):
                 "» reply to an **audio file** or **give something to search.**"
             )
         else:
-            suhu = await c.send_message(chat_id, "🔍 **Searching...**")
+            suhu = await c.send_message(chat_id, "■■■■■ `50% | Download`")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -305,12 +305,12 @@ async def play(c: Client, m: Message):
                         await m.reply_photo(
                             photo=image,
                             reply_markup=InlineKeyboardMarkup(buttons),
-                            caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [{songname}]({url}) | `music`\n**⏱ Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                            caption=f"🏷 **Bʀᴏᴋᴇɴ 😍 Tʋɴᴇꜱ 🎸 Nøω Ƥɭɑyɩɳʛ 💞 [{songname}]({url}) 🔊 Mʋsɩƈ 🌷 øɴ 🤞 ʀᴇQʋᴇꜱᴛ 👉 {requester} 😜...**",
                         )
                         os.remove(image)
                     else:
                         try:
-                            await suhu.edit("🔄 **Joining vc...**")
+                            await suhu.edit("■■■■■■■■■■ `100%`")
                             await music_on(chat_id)
                             await add_active_chat(chat_id)
                             await calls.join_group_call(
@@ -328,7 +328,7 @@ async def play(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=InlineKeyboardMarkup(buttons),
-                                caption=f"🗂 **Name:** [{songname}]({url}) | `music`\n**⏱ Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                                caption=f"🏷 **Bʀᴏᴋᴇɴ 😍 Tʋɴᴇꜱ 🎸 Nøω Ƥɭɑyɩɳʛ 💞 [{songname}]({url}) 🔊 Mʋsɩƈ 🌷 øɴ 🤞 ʀᴇQʋᴇꜱᴛ 👉 {requester} 😜...**",
                             )
                             await idle()
                             os.remove(image)
