@@ -79,7 +79,8 @@ async def start_(c: Client, message: Message):
                     )
                 ],
                 [
-                    InlineKeyboardButton("📚 Commands 📚", callback_data="command_list"),]
+                    InlineKeyboardButton("📚 Commands 📚", callback_data="command_list")
+                ],
                 [
                     InlineKeyboardButton(
                         "Group", url=f"https://t.me/{GROUP_SUPPORT}"
@@ -87,7 +88,7 @@ async def start_(c: Client, message: Message):
                     InlineKeyboardButton(
                         "Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
-                ],
+                ]
                 
             ]
         ),
