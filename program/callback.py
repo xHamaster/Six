@@ -27,8 +27,8 @@ async def set_start(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
         f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-💁🏻 **[ʙʀᴏᴋᴇɴ ᴍᴜꜱɪᴄ](https://t.me/CreatorPavan) ᴀʟʟᴏᴡꜱ ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏ ᴏɴ ᴜʀ ɢʀᴏᴜᴘꜱ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴᴇᴡ ᴛᴇʟᴇɢʀᴀᴍ'ꜱ ᴠɪᴅᴇᴏ ᴄʜᴀᴛꜱ ꜰᴇᴀᴛᴜʀᴇ..!\n
-💡 ᴜꜱᴇ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʙʀᴏᴋᴇɴ ᴍᴜꜱɪᴄ ᴏᴘ ᴍᴜꜱɪᴄ ʙᴏᴛ ꜱʏꜱᴛᴇᴍ.**
+💁🏻 **[ʙʀᴏᴋᴇɴ ².⁰ ᴍᴜꜱɪᴄ](https://t.me/CreatorPavan) ᴀʟʟᴏᴡꜱ ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏ ᴏɴ ᴜʀ ɢʀᴏᴜᴘꜱ ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴᴇᴡ ᴛᴇʟᴇɢʀᴀᴍ'ꜱ ᴠɪᴅᴇᴏ ᴄʜᴀᴛꜱ ꜰᴇᴀᴛᴜʀᴇ..!\n
+💡 ᴜꜱᴇ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʙʀᴏᴋᴇɴ ².⁰ ᴍᴜꜱɪᴄ ᴏᴘ ᴍᴜꜱɪᴄ ʙᴏᴛ ꜱʏꜱᴛᴇᴍ.**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
