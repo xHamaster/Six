@@ -113,6 +113,206 @@ async def set_commands(_, query: CallbackQuery):
     )
 
 
+@Client.on_callback_query(filters.regex("music_command"))
+async def set_user(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    if await is_gbanned_user(user_id):
+        await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
+        return
+    await query.answer("basic commands")
+    await query.edit_message_text(
+        f"""✏️ Broken Music Command.
+
+• /play (song name/link) - play music on video chat.
+
+**© @CreatorPavan**""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="command_list")]]
+        ),
+    )
+
+
+@Client.on_callback_query(filters.regex("video_command"))
+async def set_user(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    if await is_gbanned_user(user_id):
+        await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
+        return
+    await query.answer("basic commands")
+    await query.edit_message_text(
+        f"""✏️ Command list for all user.
+
+• /vplay (video name/link) - play video on video chat
+• /vstream (m3u8/yt live link) - play live stream video
+
+**© @CreatorPavan**""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="command_list")]]
+        ),
+    )
+
+
+@Client.on_callback_query(filters.regex("status_command"))
+async def set_user(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    if await is_gbanned_user(user_id):
+        await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
+        return
+    await query.answer("basic commands")
+    await query.edit_message_text(
+        f"""✏️ Command list for all user.
+
+• /ping - show the bot ping status
+• /uptime - show the bot uptime status
+• /alive - show the bot alive info (in Group only)
+
+**© @CreatorPavan**""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="command_list")]]
+        ),
+    )
+
+
+@Client.on_callback_query(filters.regex("lyrics_command"))
+async def set_user(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    if await is_gbanned_user(user_id):
+        await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
+        return
+    await query.answer("basic commands")
+    await query.edit_message_text(
+        f"""✏️ Command list for all user.
+
+• /lyric (query) - scrap the song lyric
+
+**© @CreatorPavan**""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="command_list")]]
+        ),
+    )
+
+
+@Client.on_callback_query(filters.regex("search_command"))
+async def set_user(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    if await is_gbanned_user(user_id):
+        await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
+        return
+    await query.answer("basic commands")
+    await query.edit_message_text(
+        f"""✏️ Command list for all user.
+
+• /search (query) - search a youtube video link
+
+**© @CreatorPavan**""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="command_list")]]
+        ),
+    )
+
+
+@Client.on_callback_query(filters.regex("download_command"))
+async def set_user(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    if await is_gbanned_user(user_id):
+        await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
+        return
+    await query.answer("basic commands")
+    await query.edit_message_text(
+        f"""✏️ Command list for all user.
+
+• /song (query) - download song from youtube
+
+**© @CreatorPavan**""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="command_list")]]
+        ),
+    )
+
+
+@Client.on_callback_query(filters.regex("menu_command"))
+async def set_user(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    if await is_gbanned_user(user_id):
+        await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
+        return
+    await query.answer("basic commands")
+    await query.edit_message_text(
+        f"""✏️ Command list for all user.
+
+• /pause - pause the current track being played
+• /resume - play the previously paused track
+• /skip - goes to the next track
+• /stop - stop playback of the track and clears the queue
+• /vmute - mute the streamer userbot on group call
+• /vunmute - unmute the streamer userbot on group call
+• /volume `1-200` - adjust the volume of music (userbot must be admin)
+
+** © @CreatorPavan**""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="command_list")]]
+        ),
+    )
+
+
+@Client.on_callback_query(filters.regex("user_command"))
+async def set_user(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    if await is_gbanned_user(user_id):
+        await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
+        return
+    await query.answer("basic commands")
+    await query.edit_message_text(
+        f"""✏️ Command list for all user.
+
+» /play (song name/link) - play music on video chat
+» /vplay (video name/link) - play video on video chat
+» /vstream (m3u8/yt live link) - play live stream video
+» /playlist - see the current playing song
+» /lyric (query) - scrap the song lyric
+» /video (query) - download video from youtube
+» /song (query) - download song from youtube
+» /search (query) - search a youtube video link
+» /ping - show the bot ping status
+» /uptime - show the bot uptime status
+» /alive - show the bot alive info (in Group only)
+
+⚡️ __Powered by {BOT_NAME} AI__""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="command_list")]]
+        ),
+    )
+
+
+@Client.on_callback_query(filters.regex("user_command"))
+async def set_user(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    if await is_gbanned_user(user_id):
+        await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
+        return
+    await query.answer("basic commands")
+    await query.edit_message_text(
+        f"""✏️ Command list for all user.
+
+» /play (song name/link) - play music on video chat
+» /vplay (video name/link) - play video on video chat
+» /vstream (m3u8/yt live link) - play live stream video
+» /playlist - see the current playing song
+» /lyric (query) - scrap the song lyric
+» /video (query) - download video from youtube
+» /song (query) - download song from youtube
+» /search (query) - search a youtube video link
+» /ping - show the bot ping status
+» /uptime - show the bot uptime status
+» /alive - show the bot alive info (in Group only)
+
+⚡️ __Powered by {BOT_NAME} AI__""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="command_list")]]
+        ),
+    )
+
+
 @Client.on_callback_query(filters.regex("user_command"))
 async def set_user(_, query: CallbackQuery):
     user_id = query.from_user.id
@@ -152,18 +352,18 @@ async def set_admin(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""✏️ Command list for group admin.
 
-» /pause - pause the current track being played
-» /resume - play the previously paused track
-» /skip - goes to the next track
-» /stop - stop playback of the track and clears the queue
-» /vmute - mute the streamer userbot on group call
-» /vunmute - unmute the streamer userbot on group call
-» /volume `1-200` - adjust the volume of music (userbot must be admin)
-» /reload - reload bot and refresh the admin data
-» /userbotjoin - invite the userbot to join group
-» /userbotleave - order userbot to leave from group
+• /pause - pause the current track being played
+• /resume - play the previously paused track
+• /skip - goes to the next track
+• /stop - stop playback of the track and clears the queue
+• /vmute - mute the streamer userbot on group call
+• /vunmute - unmute the streamer userbot on group call
+• /volume `1-200` - adjust the volume of music (userbot must be admin)
+• /reload - reload bot and refresh the admin data
+• /userbotjoin - invite the userbot to join group
+• /userbotleave - order userbot to leave from group
 
-⚡️ __Powered by {BOT_NAME} AI__""",
+**© @CreatorPavan**""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="command_list")]]
         ),
