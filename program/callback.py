@@ -113,11 +113,16 @@ All commands can be used with (`! / .`) handler""",
                     InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
                 ],[
                     InlineKeyboardButton("👩🏻‍💼 Users Commands", callback_data="user_command"),
+                    InlineKeyboardButton("👩🏻‍💼 Users Commands", callback_data="user_command"),
+                ],
+                [
+                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
+                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
                 ],[
                     InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
                     InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
                 ],[
-                    InlineKeyboardButton("🔙 Go Back", callback_data="home_start")
+                    InlineKeyboardButton("🔙 Go Back", callback_data="sudo_commandd")
                 ],
             ]
         ),
@@ -180,6 +185,54 @@ async def set_admin(_, query: CallbackQuery):
         ),
     )
 
+@Client.on_callback_query(filters.regex("sudo_commandd"))
+async def set_sudo(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    if await is_gbanned_user(user_id):
+        await query.answer("❗️ You've blocked from using this bot!", show_alert=True)
+        return
+    if user_id not in SUDO_USERS:
+        await query.answer("⚠️ You don't have permissions to click this button\n\n» This button is reserved for sudo members of this bot.", show_alert=True)
+        return
+    await query.answer("sudo commands")
+    await query.edit_message_text(
+        f"""✏️ Command list for sudo user.
+
+» /stats - get the bot current statistic
+» /calls - show you the list of all active group call in database
+» /block (`chat_id`) - use this to blacklist any group from using your bot
+» /unblock (`chat_id`) - use this to whitelist any group from using your bot
+» /blocklist - show you the list of all blacklisted chat
+» /speedtest - run the bot server speedtest
+» /sysinfo - show the system information
+» /eval - execute any code (`developer stuff`)
+» /sh - run any command (`developer stuff`)
+
+⚡ __Powered by {BOT_NAME} AI__""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
+                    InlineKeyboardButton("👮🏻‍♀️", callback_data="admin_command"),
+                ],[
+                    InlineKeyboardButton("👩🏻‍💼 Users Commands", callback_data="user_command"),
+                    InlineKeyboardButton("👩🏻‍💼 Users Commands", callback_data="user_command"),
+                ],
+                [
+                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
+                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
+                ],[
+                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
+                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
+                ],[
+                    InlineKeyboardButton("Sudo Commands", callback_data="sudo_command"),
+                    InlineKeyboardButton("Owner Commands", callback_data="owner_command"),
+                ],[
+                    InlineKeyboardButton("🔙 Go Back", callback_data="home_start")
+                ],
+            ]
+        ),
+    )
 
 @Client.on_callback_query(filters.regex("sudo_command"))
 async def set_sudo(_, query: CallbackQuery):
