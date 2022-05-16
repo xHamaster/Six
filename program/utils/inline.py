@@ -11,7 +11,7 @@ from pyrogram.types import (
 def stream_markup(user_id):
   buttons = [
     [
-      InlineKeyboardButton(text="ᴄʟᴏꜱᴇ", callback_data=f'set_close'),
+      InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ɢʀᴏᴜᴘ", callback_data=f'set_close'),
     ],
   ]
   return buttons
